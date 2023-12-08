@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>A térképész</title>
+</head>
+<body>
+<div class="background"></div>
+    <div class="game">
+        <div class="mapElement">
+        <h1>Burgonya térkép</h1>
+        <div class="grid"></div>
+        </div>
+            <div class="seasons">
+                <div class="spring">
+                    <div>Tavasz</div>
+                    <div class="springPoints"></div>
+                </div>
+                <div class="summer">
+                    <div>Nyár</div>
+                    <div class="summerPoints"></div>
+                </div>
+                <div class="autumn">
+                    <div>Ősz</div>
+                    <div class="autumnPoints"></div>
+                </div>
+                <div class="winter">
+                    <div>Tél</div>
+                    <div class="winterPoints"></div>
+                </div>    
+            </div>
+            <h3 class="points">Összesen: 0 pont</h3>
+            <h2 class="currentSeason"></h2>
+            <hr>
+        <div>
+                <table class="missionsTable">
+                    <tr class="missions">
+                        <td class="missionsColumn">
+                            <div class="mission1title"></div>
+                            <div class="pictureContainer">
+                                <img class="mission1picture"/>
+                            </div>
+                            <div class="missionContainer">
+                                <div class="mission1desc"></div>
+                                <div class="mission1points">(0 pont)</div>
+                                <div class="letterMarker">A</div>
+                            </div>
+                            
+                        </td>
+                        <td class="missionsColumn">
+                            <div class="mission2title"></div>
+                            <div class="pictureContainer">
+                                <img class="mission2picture"/>
+                            </div>
+                            <div class="missionContainer">
+                                <div class="mission2desc"></div>
+                                <div class="mission2points">(0 pont)</div>
+                                <div class="letterMarker">B</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="missions">
+                        <td class="missionsColumn">
+                            <div class="mission3title"></div>
+                            <div class="pictureContainer">
+                                <img class="mission3picture"/>
+                            </div>
+                            <div class="missionContainer">
+                                <div class="mission3desc"></div>
+                                <div class="mission3points">(0 pont)</div>
+                                <div class="letterMarker">C</div>
+                            </div>
+                        </td>
+                        <td class="missionsColumn">
+                            <div class="mission4title"></div>
+                            <div class="pictureContainer">
+                                <img class="mission4picture"/>
+                            </div>
+                            <div class="missionContainer">
+                                <div class="mission4desc"></div>
+                                <div class="mission4points">(0 pont)</div>
+                                <div class="letterMarker">D</div>
+                            </div>
+                        </td>
+                        
+                    </tr>
+                    
+                </table>    
+                <hr>
+                <h2 class="remainingTime"></h2>
+        </div>
+        <div class="nextElement">
+            <h1>Lehelyezendő elem:</h1>
+            <div class="timeValue"></div>
+            <div class="nextDisplay"></div>
+            <div class="buttons">
+                <button class="rotate">Forgatás</button>
+                <button class="mirror">Tükrözés</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('assets/backGround.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2; 
+  z-index: -1; 
+}
+
+
+
+
+.grid {
+    display: grid;
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-columns: repeat(11, 1fr);
+    width: 28em;
+    height: 28em;
+    max-width: 100%;
+    
+  }
+.cell{
+    box-sizing: border-box;
+    background-image: url(assets/cells.png);
+    width: 95%; 
+    height: 95%;
+    border-radius: 20%;
+  }
+  button{
+    padding: 10%;
+    border-radius:20%;
+    border: 1px rgb(182, 178, 178);
+    background-color: rgb(182, 178, 178);
+  }
+  button:hover {
+    background-color: rgb(105, 102, 102);
+    cursor:pointer;
+  }
+  button:active{
+    background-color: rgb(56, 54, 54);
+  }
+
+  table, td{
+    border: solid 2px grey;
+    border-collapse: collapse;
+    width:50%;
+  }
+  
+  .activeMission{
+    background-color: green;
+  }
+
+  .buttons{
+    float:left;
+    margin-left:10%;
+  }
+  .rotate{
+    margin-top: 10%;
+    margin-bottom: 20%;
+  }
+.mountain{
+    background-image: url("assets/mountain.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+.water{
+    background-image: url("assets/water.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+.farm{
+    background-image: url("assets/wheat.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+.town{
+    background-image: url("assets/house.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+.forest{
+    background-image: url("assets/tree.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+.mapElement{
+    float:left;
+    margin-left: 10%;
+    width: 40%; 
+  }
+
+.nextElement{
+    width: 45%;
+    margin-left: 50%;
+    background-color: rgb(236, 232, 232);
+    margin-right: 5%;
+    border-radius: 5%;
+    padding-top: 1%;
+    padding-bottom: 0.5%;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+    display: flex;
+}
+.nextDisplay{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    width:50%;
+    width: 8em;
+    height: 8em;
+    margin-left:3%;
+    float:left;
+}
+
+.seasons {
+  display: flex;
+  justify-content: space-between; /* or any other spacing option */
+  width: 30%; /* Adjust the width as needed */
+  text-align: center;
+  margin-left: 60%;
+}
+
+.spring,
+.summer,
+.autumn,
+.winter {
+  flex: 1;
+  text-align: center;
+  border: 3px solid;
+  color: white;
+  font-size: x-large;
+  margin: 0 2px; /* Adjust margin as needed for additional spacing */
+}
+
+.spring{
+    background-color: rgb(119, 209, 119);
+    border-color: rgb(4, 58, 4);
+}
+.summer{
+    background-color: rgb(224, 224, 43);
+    border-color: rgb(139, 139, 40);
+    
+}
+.autumn{
+    background-color: rgb(145, 67, 22);
+    border-color: rgb(63, 30, 11);
+}
+.winter{
+    background-color: rgb(62, 207, 207);
+    border-color: rgb(28, 87, 87);
+}
+.points{
+  text-align:center;
+}
+.selected{
+  background-image: url("assets/selected.png") !important;
+  border: solid 2px !important;
+  border-color: rgb(0, 216, 0) !important;
+  border-radius: 15% !important;
+}
+.invalid {
+  opacity: 0.6;
+  border: solid 3px !important;
+  border-color: red !important;
+  border-radius: 15% !important;
+}
+
+.timeValue{
+  font-size: larger;
+  background-color: white;
+  height:20%;
+  text-align: center;
+  border-color: rgb(31, 31, 31);
+  border: solid 3px;
+  border-radius: 25%;
+}
+.missions{
+  border-radius: 25%;
+  background-color: gray;
+  color: white;
+}
+.missionsTable{
+  border-collapse: collapse;
+  border: 5px solid black;
+  border-radius: 20%;
+}
+.missionsColumn{
+  border-collapse: collapse;
+  border: 5px solid black;
+  position: relative;
+}
+.mission1title, .mission2title, .mission3title, .mission4title{
+  text-align: center;
+}
+.letterMarker{
+  text-align: right;
+  font-size: x-large;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  padding: 5px; /* Adjust padding as needed */
+}
+
+.mission1points, .mission2points, .mission3points, .mission4points{
+  bottom: 0;
+  right: 50%;
+  padding: 5px; /* Adjust padding as needed */
+}
+
+.mission1picture, .mission2picture, .mission3picture, .mission4picture{
+  float:left;
+  width: 25%;
+  height: 25%;
+  margin-right: 2%;
+}
+.missionContainer{
+  height: 50%;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .nextDisplay {
+      width: 100%;
+      max-width: 10em;
+    }
+  
+    .mapElement {
+      float: none;
+      margin-left: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+    .cell {
+        width: 95%;
+        height: 95%;
+      }
+  
+    .nextElement {
+      float: none;
+      width: 100%;
+      margin-left: 0;
+      max-width: 100%;
+    }
+    .spring,
+    .summer,
+    .autumn,
+    .winter {
+      flex: 1;
+  text-align: center;
+  border: 3px solid;
+  color: white;
+  font-size: x-large;
+  margin: 0 2px; /* Adjust margin as needed for additional spacing */
+  }
+  .spring{
+    background-color: rgb(119, 209, 119);
+    border-color: rgb(4, 58, 4);
+}
+.summer{
+    background-color: rgb(224, 224, 43);
+    border-color: rgb(139, 139, 40);
+    
+}
+.autumn{
+    background-color: rgb(145, 67, 22);
+    border-color: rgb(63, 30, 11);
+}
+.winter{
+    background-color: rgb(62, 207, 207);
+    border-color: rgb(28, 87, 87);
+}
+  .seasons {
+    margin-left: 0%;
+  }
+}
+
